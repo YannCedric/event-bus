@@ -1,0 +1,43 @@
+event bus SWAM started on 8888
+event bus FLOWER started on 8888
+yann
+yann
+yann
+yann
+event bus LIFE started on 8888
+event bus DURING started on 8888
+event bus PROBABLY started on 8888
+CONNECTION | rItfKAhsvPcnmTDnAAAA
+CONNECTION | s_hGSC2mcJJFHpAVAAAB
+LOGIN | rItfKAhsvPcnmTDnAAAA | {"username":"yann","password":"lul"}
+DISCONNECTION | rItfKAhsvPcnmTDnAAAA
+CONNECTION | TCKeMnDTHb38ECyXAAAC
+LOGIN | TCKeMnDTHb38ECyXAAAC | {"username":"bigsott","password":0}
+DISCONNECTION | TCKeMnDTHb38ECyXAAAC
+CONNECTION | 8JHL8eFquRvZSsHUAAAD
+LOGIN | 8JHL8eFquRvZSsHUAAAD | {"username":"bigsott","password":1}
+DISCONNECTION | 8JHL8eFquRvZSsHUAAAD
+CONNECTION | -WX_Q0nNZnwU100WAAAE
+LOGIN | -WX_Q0nNZnwU100WAAAE | {"username":"bigsott","password":2}
+DISCONNECTION | -WX_Q0nNZnwU100WAAAE
+CONNECTION | 3Khxp1CU3ISjZL4UAAAF
+LOGIN | 3Khxp1CU3ISjZL4UAAAF | {"username":"bigsott","password":3}
+DISCONNECTION | 3Khxp1CU3ISjZL4UAAAF
+CONNECTION | l11swDv1XoUajN_xAAAG
+LOGIN | l11swDv1XoUajN_xAAAG | {"username":"bigsott","password":4}
+DISCONNECTION | l11swDv1XoUajN_xAAAG
+CONNECTION | A3veOVVHG_s_IY1XAAAH
+LOGIN | A3veOVVHG_s_IY1XAAAH | {"username":"bigsott","password":5}
+DISCONNECTION | A3veOVVHG_s_IY1XAAAH
+CONNECTION | 8uxKuTZN7_lX7CTLAAAI
+LOGIN | 8uxKuTZN7_lX7CTLAAAI | {"username":"bigsott","password":6}
+DISCONNECTION | 8uxKuTZN7_lX7CTLAAAI
+CONNECTION | i3NQgBovHg3q99GhAAAJ
+LOGIN | i3NQgBovHg3q99GhAAAJ | {"username":"bigsott","password":7}
+DISCONNECTION | i3NQgBovHg3q99GhAAAJ
+CONNECTION | dOCotDOFQ9qUZjVRAAAK
+LOGIN | dOCotDOFQ9qUZjVRAAAK | {"username":"bigsott","password":8}
+DISCONNECTION | dOCotDOFQ9qUZjVRAAAK
+CONNECTION | r0sEg8xNEVjG7RHpAAAL
+LOGIN | r0sEg8xNEVjG7RHpAAAL | {"username":"bigsott","password":9}
+DISCONNECTION | r0sEg8xNEVjG7RHpAAAL
