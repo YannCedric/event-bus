@@ -66,7 +66,7 @@ const publisher = new BusPublisher({hostname: '132.11.341',port:8000})
 
 publisher.publish({event: 'event1', data: money})
 
-publisher.publish({event: 'event2', data: {name: 'cedric', age: '22})
+publisher.publish({event: 'event2', data: {name: 'cedric', age: 22}})
 
 publisher.publish({event: 'event3', data: {awesomeness: 'gold'}})
 ```
