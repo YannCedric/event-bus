@@ -1,7 +1,9 @@
-# EVENT BUS
+# Lightweight Event Bus
 
 Light event-bus (and clients), build with nodejs.  
 The module can handle about 1400-1800 concurrent connections.
+
+https://github.com/YannCedric/event-bus
 
 # API
 
