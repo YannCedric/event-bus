@@ -2,13 +2,15 @@ const io = require('socket.io')()
 const fancylog = require('fancy-log')
 const someWord = require('random-words')
 const fs = require('fs')
+const BusPublisher = require('./BusPublisher')
 
 module.exports = class EventBus {
-    constructor({logfile='none',p = 8888 , port = p, n=someWord().toUpperCase(), name=n}={}){
+    constructor({hostname,logfile='none',p = 8888 , port = p, n=someWord().toUpperCase(), name=n}={}){
         
         this.name = name
         this.port = port
         this.listeners = []
+        this.publisher = new BusPublisher({hostname,port})
         // Logger middleware to write into text file
         this.logger = (log) => {
             const msg = log+'\n'
@@ -23,6 +25,10 @@ module.exports = class EventBus {
             }
         }
 
+    }
+
+    publish(event,data){
+        this.publisher.publish({event,data})
     }
 
     start(){
