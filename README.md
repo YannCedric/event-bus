@@ -10,7 +10,7 @@ https://github.com/YannCedric/event-bus
 ## Event Bus
 
 ```javascript
-const {EventBus} = require('event-bus-mini')
+const {EventBus} = require('event-bus-mini') 
 
 const bus = new EventBus({port: 8000, name: 'MY AWESOME BUS'})
 
@@ -72,3 +72,5 @@ publisher.publish({event: 'event2', data: {name: 'cedric', age: 22}})
 
 publisher.publish({event: 'event3', data: {awesomeness: 'gold'}})
 ```
+
+> PS: In order to use the library in the browser, the imports need to be changed from **require('event-bus-mini')** : to const BusSubscriber = require('event-bus-mini/**BusSubscriber**')  and const BusPublisher = require('event-bus-mini/**BusPublisher')**
