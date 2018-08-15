@@ -15,7 +15,10 @@ class BusSubscriber  {
 
         this.events.forEach(({event,callback}) => {
             this.connection.on(event, (data) => {
-                callback(data)
+                if(callback)
+                    callback(data)
+                else 
+                    console.log(`Subscriber Warning: event "${event}" needs a callback method`)
             })
         })
     }

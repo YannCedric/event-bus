@@ -5,8 +5,8 @@ const fs = require('fs')
 const BusPublisher = require('./BusPublisher')
 
 module.exports = class EventBus {
-    constructor({hostname,logfile='none',p = 8888 , port = p, n=someWord().toUpperCase(), name=n}={}){
-        
+    constructor({hostname,logfile='none',p = 8888 , port = p, n=someWord().toUpperCase(), name=n, accessLogs=false}={}){
+        this.accessLogs = accessLogs
         this.name = name
         this.port = port
         this.listeners = []
@@ -32,7 +32,7 @@ module.exports = class EventBus {
     }
 
     start(){
-        const {name, port, logger} = this
+        const {name, port, logger, accessLogs} = this
         logger('        Events:')
 
         this.listeners.forEach( item => {
@@ -40,16 +40,17 @@ module.exports = class EventBus {
             io.on('connection', function(client){
                 
                 client.on(item.event, (data, clientCallback) => {
-                    logger(`CONNECTION | ${client.id}`)
+                    if(accessLogs) logger(`CONNECTION | ${client.id}`)
                     logger(`${item.event} | ${client.id} | ${JSON.stringify(data)}`)
                     
                     io.emit(item.event,data)
                     
-                    item.callback({data, logger, client})
+                    if(item.callback)
+                        item.callback({data, logger, client})
                     
                     clientCallback()
                     client.on('disconnect', () => {
-                        logger(`DISCONNECTION | ${client.id}`)
+                        if(accessLogs) logger(`DISCONNECTION | ${client.id}`)
                     })
                 })
             
